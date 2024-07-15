@@ -29,7 +29,7 @@ st.title("LangChain Chatbot using OPENAI LLM")
 user_input=st.text_input("Enter your question") # Taking the input from user
 
 # Calling the OPENAI LLM
-llm = ChatOpenAO(model="gpt-3.5-turbo") # Model Name
+llm = ChatOpenAI(model="gpt-3.5-turbo") # Model Name
 output_parser = StrOutputParser # Output response from LLM
 chain = prompt|llm|output_parser # Combining the different components of the cycle together
 

@@ -162,3 +162,5 @@ cython_debug/
 #.idea/
 
 langchain/*
+
+HuggingFace/us_census/*

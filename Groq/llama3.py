@@ -52,7 +52,7 @@ def vector_embedding():
 prompt1=st.text_input("Enter Your Question From Doduments")
 
 
-if st.button("Documents Embedding"):
+if st.button("Documents Embedding"): # Used for reading all the Documents and storing them in the vector database
     vector_embedding()
     st.write("Vector Store DB Is Ready")
 
@@ -69,7 +69,7 @@ if prompt1:
     print("Response time :",time.process_time()-start)
     st.write(response['answer'])
 
-    # With a streamlit expander
+    # With a streamlit expander(shows from where in the document, the data is getting retrieved)
     with st.expander("Document Similarity Search"):
         # Find the relevant chunks
         for i, doc in enumerate(response["context"]):
